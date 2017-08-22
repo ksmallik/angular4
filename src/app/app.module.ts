@@ -1,16 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { MyComponent } from './app.component';
+import { MyComponentComponent } from './my-component/my-component.component';
+import { DataService } from './data.service';
+import { AuthorsComponent } from './authors/authors.component';
+import { AuthorserviceService } from './authorservice.service';
+import { AutoGrowDirective } from './auto-grow.directive';
+import { StarComponent } from './star/star.component';
+import { HeartComponent } from './heart/heart.component';
+import { StackvoteComponent } from './stackvote/stackvote.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    MyComponent,
+    MyComponentComponent,
+    AuthorsComponent,
+    AutoGrowDirective,
+    StarComponent,
+    HeartComponent,
+    StackvoteComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DataService, AuthorserviceService],
+  bootstrap: [MyComponent]
 })
 export class AppModule { }
